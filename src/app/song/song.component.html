@@ -1,0 +1,13 @@
+<div class="row">
+    <div  class="card " *ngFor="let song of  songs">
+      <div class="card-body">
+        <h4 class="card-title">              {{song.name}}
+        </h4>
+      </div>
+      <div class="card-text">
+      <ul>
+        {{song.artist}}  - Price:{{song.priceSong}} 
+      </ul>
+      </div>
+    </div>
+  </div>

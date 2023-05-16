@@ -1,0 +1,26 @@
+<div *ngIf="album" class="card">
+  <div class="card-body">
+      <h3 class="card-title">
+          {{album.name}}
+      </h3>
+      <div class="card-text from-group">
+          {{album.artist}} 
+          <br>
+          {{album.review}}
+          <br>  
+        Price: {{album.price}}
+        <br>
+        Score:  {{album.rating/album.totalVotes}}
+      <br>
+      <app-song (true)="getSongs()"> 
+      </app-song>
+      <div>
+        <button (click)="like()" class="btn-primary btn col-sm-4 mx-2">
+            Like Album
+        </button>
+        <button (click)="dislike()" class="btn-danger btn col-sm-4 mx-2">
+            Dislike Album
+        </button>
+       </div>
+  </div>
+</div>
